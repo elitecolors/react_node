@@ -6,6 +6,10 @@ const app=express();
 // connect DATABASE
 connectDb();
 
+// INIT
+
+app.use(express.json({extended: false}));
+
 app.get('/',(req, res)=>res.send('API running'));
 
 // define routes
