@@ -8,6 +8,7 @@ import {
     AUTH_ERROR,
     LOGIN_SUCCES,
     LOGIN_FAIL,
+    LOG_OUT
 
 } from "./types";
 
@@ -84,4 +85,10 @@ export const login = ({email,password
             type: LOGIN_FAIL
         });
     }
+}
+
+export const logout = () => dispatch => {
+    dispatch ({
+       type: LOG_OUT
+    });
 }
